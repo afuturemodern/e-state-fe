@@ -74,10 +74,11 @@ i {
 
 .e-state-header__menu {
     color: var(--e-state-icon-light);
-    display: flex;
     width: var(--e-state-side-width);
+    max-width: 250px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
+    margin-left: auto;
 }
 
 .e-state-header__menu i {
