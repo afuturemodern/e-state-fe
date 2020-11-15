@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="e-state__page-container">
+            <header class="e-state-header">
+                <div class="e-state-header__search-container">
+                    <i class="material-icons">search</i>
+                    <input class="e-state-header__search-input" type="text" placeholder="Search for a building or landlord..."/>
+                </div>
+                <div class="e-state-header__menu">
+                    <i class="material-icons">notification_important</i>
+                    <i class="material-icons">mail</i>
+                    <div class="e-state__profile-icon">J</div>
+                </div>
+            </header>
+            <aside class="e-state-side-nav">
+                <div class="e-state-side-nav__handle">
+                    <img class="e-state-side-nav__logo" src="./assets/img/e-state.png" />
+                    <i class="material-icons e-state-side-nav__handle-icon">menu</i>
+                </div>
+                <div class="e-state-side-nav__menu">
+                    <div class="e-state-side-nav__menu-item">
+                        <i class="material-icons">home</i>
+                        <span class="e-state-side-nav__menu-item-text">Home</span>
+                    </div>
+                    <div class="e-state-side-nav__menu-item">
+                        <i class="material-icons">help</i>
+                        <span class="e-state-side-nav__menu-item-text">About</span>
+                    </div>
+                    <div class="e-state-side-nav__menu-item">
+                        <i class="material-icons">emoji_objects</i>
+                        <span class="e-state-side-nav__menu-item-text">Discovery</span>
+                    </div>
+                    <div class="e-state-side-nav__menu-item">
+                        <i class="material-icons">bookmark</i>
+                        <span class="e-state-side-nav__menu-item-text">Bookmarks</span>
+                    </div>
+                </div>
+            </aside>
+            <main class="e-state__body">
+                <div class="e-state-explorer">
+                    <div class="e-state-explorer__controls">
+                        <select class="e-state-explorer__sort">
+                            <option value="recent" selected>Most Recent</option>
+                            <option value="alphabetical">Alphabetical</option>
+                            <option value="price-lowest">Price (Lowest First)</option>
+                            <option value="price-highest">Price (Highest First)</option>
+                            <option value="comments">Most Comments</option>
+                        </select>
+                        <button class="e-state-explorer__add-button">+</button>
+                    </div>
+                    <div class="e-state-explorer__post-list">
+                    </div>
+                </div>
+            </main>
+        <div>
+        <script src="./assets/js/scripts.js"></script>
+    </body>
+</html>

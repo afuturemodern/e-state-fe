@@ -1,0 +1,299 @@
+/* Global Styles */
+:root {
+    --e-state-blue: #4563ff;
+    --e-state-blue-grey: #8a9cfe;
+    --e-state-grey: #9fa2b0;
+    --e-state-bg: #f0f2ff;
+    --e-state-icon-light: #ced5ff;
+    --e-state-side-nav-hover-bg: #e7ecff;
+    --e-state-icon-size-large: 45px;
+    --e-state-main-width: 50%;
+    --e-state-side-width: 25%;
+    --e-state-box-shadow-color: rgba( 0, 0, 0, .1 );
+    --e-state-header-height: 78px;
+    --e-state-border-radius: 8px;
+    --e-state-bottom-box-shadow: 0 3px 3px 1px var(--e-state-box-shadow-color);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--e-state-bg);
+}
+
+i {
+    user-select: none;
+}
+
+/* Header CSS */
+
+.e-state-header {
+    background-color: var(--e-state-blue);
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.e-state-header__search-container {
+    background-color: var(--e-state-blue-grey);
+    border-radius: var(--e-state-border-radius);
+    color: var(--e-state-icon-light);
+    display: flex;
+    align-items: center;
+    padding: 8px 5px;
+    width: var(--e-state-main-width);
+    margin-left: var(--e-state-side-width);
+    box-sizing: border-box;
+}
+
+.e-state-header__search-container i {
+    font-size: 32px;
+}
+
+.e-state-header__search-input {
+    border: 0;
+    background: transparent;
+    color: var(--e-state-icon-light);
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+.e-state-header__search-input:focus {
+    outline: none;
+}
+
+.e-state-header__search-input::placeholder {
+    color: var(--e-state-icon-light);
+    font-weight: bold;
+}
+
+
+.e-state-header__menu {
+    color: var(--e-state-icon-light);
+    display: flex;
+    width: var(--e-state-side-width);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.e-state-header__menu i {
+    font-size: var( --e-state-icon-size-large );
+    margin: 0 10px;
+}
+
+.e-state__profile-icon {
+    width: var( --e-state-icon-size-large );
+    height: var( --e-state-icon-size-large );
+    font-size: 30px;
+    line-height: 1;
+    background-color: var(--e-state-icon-light);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+/* Side Nav CSS */
+.e-state-side-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    box-shadow: 3px 0 3px var(--e-state-box-shadow-color);
+    z-index: 1;
+    transition: width .25s;
+}
+
+.e-state-side-nav--open {
+    width: 250px;
+}
+
+.e-state-side-nav__handle {
+    height: var(--e-state-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.e-state-side-nav--open .e-state-side-nav__handle {
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.e-state-side-nav__handle i {
+    font-size: 38px;
+    color: var(--e-state-icon-light);
+    cursor: pointer;
+}
+
+.e-state-side-nav__logo {
+    display: none;
+}
+
+.e-state-side-nav--open .e-state-side-nav__logo {
+    display: block;
+}
+
+.e-state-side-nav__menu {
+    margin-top: 20px;
+}
+
+.e-state-side-nav__menu-item {
+    margin-bottom: 10px;
+    color: #8d9df0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.e-state-side-nav__menu-item:hover {
+    background-color: var(--e-state-side-nav-hover-bg);
+}
+
+.e-state-side-nav--open .e-state-side-nav__menu-item {
+    justify-content: flex-start;
+    padding-left: 25px;
+    border-left: 5px solid transparent;
+}
+
+.e-state-side-nav--open .e-state-side-nav__menu-item:hover {
+    border-left-color: var(--e-state-blue);
+}
+
+.e-state-side-nav__menu-item i {
+    color: var(--e-state-blue);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.e-state-side-nav__menu-item-text {
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.e-state-side-nav--open .e-state-side-nav__menu-item-text {
+    display: block;
+}
+
+/* Main body */
+
+.e-state__body {
+    width: var(--e-state-main-width);
+    margin: var(--e-state-header-height) auto 0;
+}
+
+/* Explorer */
+
+.e-state-explorer {
+    padding-top: 40px;
+}
+
+.e-state-explorer__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.e-state-explorer__sort {
+    border: 0;
+    color: var(--e-state-blue);
+    padding: 10px;
+    border-radius: var(--e-state-border-radius);
+    font-weight: bold;
+    box-shadow: var(--e-state-bottom-box-shadow);
+}
+
+.e-state-explorer__sort:focus {
+    outline: none;
+}
+
+.e-state-explorer__add-button {
+    border: 0;
+    border-radius: var(--e-state-border-radius);
+    background-color: var(--e-state-blue);
+    color: #fff;
+    font-size: 36px;
+    padding: 0 10px;
+    box-shadow: var(--e-state-bottom-box-shadow);
+    cursor: pointer;
+}
+
+.e-state-explorer__add-button:focus {
+    outline: none;
+}
+
+.e-state-explorer-post {
+    width: 100%;
+    display: flex;
+    border-radius: var(--e-state-border-radius);
+    box-shadow: var(--e-state-bottom-box-shadow);
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.e-state-explorer-post__img {
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+}
+
+.e-state-explorer-post__bookmark {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    color: var(--e-state-blue-grey);
+    cursor: pointer;
+}
+
+.e-state-explorer-post__content {
+    padding: 20px 40px 10px 15px;
+    box-sizing: border-box;
+}
+
+.e-state-explorer-post__header {
+    margin-bottom: 8px;
+}
+
+.e-state-explorer-post__location {
+    font-size: 20px;
+}
+
+.e-state-explorer-post__text-row {
+    color: var(--e-state-grey);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.e-state-explorer-post__icons {
+    display: flex;
+    color: var(--e-state-blue-grey);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.e-state-explorer-post__icons i {
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+.e-state-explorer-post__icon {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
